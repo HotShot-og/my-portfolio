@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .neon-text-blue {
+    @apply text-neon-blue animate-glow;
+  }
+
+  .neon-text-pink {
+    @apply text-neon-pink;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7),
+      0 0 20px rgba(255, 0, 255, 0.5);
+  }
+
+  .neon-text-green {
+    @apply text-neon-green;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.7),
+      0 0 20px rgba(0, 255, 102, 0.5);
+  }
+
+  .neon-border {
+    @apply border-neon-blue;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5),
+      inset 0 0 10px rgba(0, 242, 255, 0.2);
+  }
+
+  .neon-button {
+    @apply bg-transparent text-neon-blue border border-neon-blue px-6 py-3 rounded-md transition-all duration-300;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+  }
+
+  .neon-button:hover {
+    @apply bg-neon-blue bg-opacity-10 text-white;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.5), 0 0 30px rgba(0, 242, 255, 0.3);
+  }
+
+  .project-card {
+    @apply bg-dark-gray rounded-lg overflow-hidden transition-all duration-300;
+  }
+
+  .project-card:hover {
+    @apply transform -translate-y-2;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+  }
+
+  .form-input {
+    @apply bg-dark-gray border-b-2 border-gray-700 w-full py-2 px-3 text-white focus:outline-none focus:border-neon-blue transition-colors duration-300;
+  }
+}
